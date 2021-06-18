@@ -1,0 +1,6 @@
+.button-animation{
+    @include button;
+    &:hover{
+        @include button-hover;
+    }
+}

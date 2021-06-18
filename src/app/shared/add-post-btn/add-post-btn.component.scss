@@ -1,0 +1,21 @@
+@import '../../../sass/main.scss';
+
+.addpostbtn {
+  button {
+    @include float-btn;
+  }
+}
+
+/* media query*/
+@media screen and (max-width:800px) {
+  .addpostbtn {
+    button {
+      border-radius: 5rem;
+      height: 3rem;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

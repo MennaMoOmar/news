@@ -1,0 +1,60 @@
+@import '../../../sass/main.scss';
+
+#footer{
+    background-color: $colsecondary;
+    color: $colfont;
+    padding: 2rem 1rem;
+    // padding-left:3rem;
+}
+#footer .col-md-4{
+    width: 30%;
+}
+#footer .col-sm-6{
+    width: 50%;
+}
+#footer hr{
+    background-color:$colfontsecondary;
+    margin: 1rem 0rem;
+}
+
+
+#footer .info h5{
+    color: $colmain;
+    margin-bottom: 1rem;
+}
+#footer .info span{
+    display: block;
+}
+#footer .info span:hover{
+    color: $colmain;
+    cursor:pointer;
+    transition: ease-in-out .2s;
+}
+#footer .info i{
+    font-weight: normal;
+}
+
+
+#footer .icons{
+    text-align: center;
+}
+#footer .icons i{
+    margin-right: 20px;
+    width: 30px;
+    padding: 7px;
+    border: 1px double #959595;
+    border-radius: 100%;
+}
+#footer .icons i:hover{
+    color: $colmain;
+    cursor:pointer;
+    border: 1px double $colmain;
+    transition: ease-in-out .2s;
+    
+}
+
+#footer .cpyRight:hover{
+    color: $colmain;
+    cursor:pointer;
+    transition: ease-in-out .3s;
+}

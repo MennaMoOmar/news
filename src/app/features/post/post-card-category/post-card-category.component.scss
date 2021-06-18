@@ -1,0 +1,60 @@
+@import '../../../../sass/main.scss';
+
+.postcategory {
+  position: relative;
+  top: -10rem;
+
+  .row {
+    justify-content: space-around;
+  }
+
+  &__card {
+    border: 1px solid $colbg;
+    border-radius: .5rem;
+
+    &__image {
+      background-color: $colwhite;
+      text-align: center;
+      border-radius: .5rem .5rem 0rem 0rem;
+
+      img {
+        height: 5rem;
+        border-radius: .5rem .5rem 0rem 0rem;
+      }
+    }
+
+    &__para {
+      @include card-body;
+
+      &:hover {
+        @include card-body-hover;
+      }
+
+      &__icon {
+        font-size: 1.5rem
+      }
+      span{
+        margin: 0rem .5rem;
+      }
+    }
+  }
+}
+
+/* media query */
+@media screen and (max-width:500px) {
+  .postcategory {
+    &__card {
+      &__image {
+        img {
+          height: 5rem;
+        }
+      }
+
+      &__para {
+        &__icon {
+          display: none;
+        }
+      }
+    }
+  }
+}

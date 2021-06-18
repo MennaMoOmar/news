@@ -1,0 +1,164 @@
+@import '../../../../sass/main.scss';
+
+.post {
+  &__postcard {
+    background-color: $colwhite;
+    border: 1px solid $colbg;
+    border-radius: .5rem;
+    box-shadow: 0px 2px 7px $colbg;
+    padding: 1rem;
+    margin: 2rem 0rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-.3rem);
+      transition: all .3s;
+    }
+
+    &__header {
+      .col-10 {
+        span {
+          color: $colfontsecondary;
+          padding: 0rem .5rem;
+        }
+      }
+
+      .col-2 {
+        text-align: center;
+
+        span {
+          color: $colmain;
+        }
+      }
+
+      &__image {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    /* Devide each card to parts info, data, title, body, image, footer and style each of them seprately*/
+    /* info part */
+    &__info {
+      .col-8 {
+        display: flex;
+        align-items: center;
+
+        i {
+          color: green;
+          font-size: .5rem;
+          margin-right: .5rem;
+        }
+      }
+
+      .col-4 {
+        text-align: end;
+
+        i {
+          color: red;
+          margin-right: .5rem;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    /* data part */
+    &__date {
+      p {
+        color: $colfontsecondary;
+        padding-left: 2.5rem;
+
+      }
+    }
+
+    /* title part */
+    &__title {
+      font-weight: bold;
+    }
+
+    /* body part */
+    &__body {
+      padding: .5rem 0rem;
+    }
+
+    /* image part */
+    &__image {
+      img {
+        width: 100%;
+        height: 10rem;
+        margin: 1rem 0rem;
+      }
+    }
+
+    /* footer part */
+    &__footer {
+      border: 1px solid $colbg;
+      border-radius: 2rem;
+      padding: 1rem;
+
+      &__sec1 {
+        color: $colfontsecondary;
+        padding: .5rem 0rem;
+
+        i {
+          color: $colfontsecondary;
+          margin-right: 1.5rem;
+
+          span {
+            padding: 0rem .5rem;
+          }
+        }
+
+        &__comment {
+          text-align: end;
+        }
+      }
+
+
+      .row {
+        display: flex;
+        align-items: center;
+      }
+
+      &__sec2 {
+        i {
+          color: $colfontsecondary;
+          margin-right: 1.5rem;
+        }
+
+        &__comment {
+
+          text-align: end;
+
+          input {
+            @include input;
+            padding: .2rem;
+            margin-right: .5rem;
+            width: 85%;
+          }
+
+          i {
+            color: $colmain;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* media query */
+@media screen and (max-width:988px) {
+
+  .post {
+    &__postcard {
+      &__footer {
+        &__sec2 {
+          &__likes {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

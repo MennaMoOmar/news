@@ -1,0 +1,51 @@
+@import '../../../sass/main.scss';
+
+
+ /* animation*/
+ @keyframes come-in {
+    to { transform: translateY(0); }
+  }
+
+.about{
+    margin-bottom: 3rem;
+    &__header{
+        display: flex;
+        justify-content: center;
+        h2{
+            position: relative;
+            top: -4rem;
+        }
+    }
+    h3{
+        color: $colmain;
+    }
+    p{
+        color: $colfont;
+        margin: 1.5rem 0rem;
+    }
+    button{
+        padding: .5rem;
+    }
+
+    &__images{
+        transform: translateY(150px);
+        animation: come-in 3s ease forwards;
+        img{
+            width: 250px;
+            height: 250px;
+        }
+        &__img2{
+            position: relative;
+            left: -5rem;
+            top: -2rem;
+        }
+    }
+}
+
+
+/* media query*/
+@media screen and (max-width:1200px) {
+    .about{
+        display: none;
+    }
+}

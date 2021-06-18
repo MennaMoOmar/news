@@ -1,0 +1,33 @@
+.ddl{
+    &__item{
+        &__link{
+            background-color: #AAD8D3;
+            color: #fff;
+            border-bottom: 1px solid #00ADB5;
+            &:hover{
+                background-color: #00ADB5;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: .7rem;
+    right: 0;
+    &__item{
+        list-style: none;
+        text-align: start;
+    }
+}
+
+.navbar__left__name{
+    &:hover{
+        .dropdown{
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+/* button animation */
+@mixin button {
+  background-color: $colwhite;
+  outline: none;
+  border: 1px solid $colmain;
+  background-image:
+    linear-gradient(to top, hsl(0, 0%, 100%) 50%, $colmain 50%),
+    linear-gradient(to top, $colmain 50%, transparent 50%);
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-position 0.5s ease-in-out;
+  padding: 0rem .5rem;
+}
+
+@mixin button-hover {
+  background-position: bottom;
+}
+
+/* style input */
+@mixin input {
+  border-radius: 2rem;
+  border: 1px solid $colbg;
+  outline: none;
+  text-indent: .5rem;
+  padding: .2rem;
+  border: 1.7px solid $colfontsecondary;
+
+}
+
+/* card animation */
+@mixin card-body {
+  background-color: $colmain;
+  outline: none;
+  background-image:
+    linear-gradient(to top, hsl(0, 88%, 43%) 50%, $colwhite 50%),
+    linear-gradient(to top, $colwhite 50%, transparent 50%);
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-position 0.5s ease-in-out;
+  border-radius: 0rem 0rem .5rem .5rem;
+  padding: 1.5rem .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 6rem;
+}
+
+@mixin card-body-hover {
+  background-position: bottom;
+  cursor: pointer;
+}
+
+/* floated btn */
+@mixin float-btn{
+  border: none;
+  outline: none;
+  background-color: $colmain;
+  color: $colwhite;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  position: fixed;
+  margin-top: 5rem;
+  border-radius: 2rem 0rem 0rem 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: .8;
+}
+
+/* remove focus */
+@mixin removeFocus {
+  border-color: 2px solid $colsecondary;
+  box-shadow: none;
+  outline: 0 none;
+}

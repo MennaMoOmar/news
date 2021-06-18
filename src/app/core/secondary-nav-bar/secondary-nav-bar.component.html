@@ -1,0 +1,37 @@
+<nav class="navbar row" [ngClass]="{ 'navbar-fixed': isFixedNavbar }">
+  <div class="navbar__logo col-1">
+    <div class="navbar__logo">
+      <img src="../../../assets/images/logo.png" />
+    </div>
+    <button color="accent" class="navbar-toggle" (click)="toggleNavbar()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <div class="top-navbar col-5">
+    <a class="navbartop-btn active" routerLink="/">Home</a>
+    <a class="navbartop-btn">About</a>
+    <a class="navbartop-btn" routerLink="addpost">Posts</a>
+    <a class="navbartop-btn">Contact</a>
+  </div>
+
+  <div class="navbar__left col-9 col-lg-4">
+    <input type="text" placeholder="search..." class="navbar__left__search" />
+    <input type="search" placeholder="Search..." />
+    <div class="navbar__left__notification">
+      <i class="fas fa-bell"></i>
+      <span>2</span>
+    </div>
+    <img class="navbar__left__image" src="../../../assets/images/user.png" />
+    <span class="navbar__left__name">menna <i class="fas fa-angle-down"></i>
+            <ul class="dropdown">
+        <li class="dropdown__item">
+          <a class="ddl__item__link dropdown-item" href="#"><i class="fas fa-user-edit"></i> Edit Profile</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="ddl__item__link dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </li>
+      </ul>
+    </span>
+  </div>
+</nav>

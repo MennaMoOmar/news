@@ -1,0 +1,31 @@
+@import '../../../../sass/main.scss';
+
+.addpost {
+  background-image: url('../../../../assets/images/postpg.png');
+  padding-top: 7rem;
+  height: 100vh;
+  background-position-x: right;
+  background-repeat: no-repeat;
+
+  &__form {
+    margin: 2rem 0rem;
+
+    .form-control {
+      margin: .5rem 0rem;
+    }
+
+    input:focus,
+    textarea:focus{
+        @include removeFocus;
+    }
+
+    p {
+      display: block;
+    }
+
+    button {
+      padding: .5rem;
+    }
+
+  }
+}

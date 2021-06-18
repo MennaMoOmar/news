@@ -1,0 +1,152 @@
+@import '../../../sass/main.scss';
+
+.navbar {
+  background-color: $colwhite;
+  padding: .5rem 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0px 0px 5px $colfontsecondary;
+
+  .top-navbar {
+    text-align: end;
+
+    a {
+      text-decoration: none;
+      color: $colfont;
+      font-weight: 500;
+      margin: 0rem .5rem;
+
+      &:hover {
+        border-bottom: 2px solid $colmain;
+        border-width: fit-content;
+        transition: all .2s;
+        width: fit-content;
+      }
+    }
+  }
+
+  &-toggle {
+    display: none !important;
+    position: absolute !important;
+    right: 5px;
+  }
+
+  &__logo {
+    img {
+      width: 50px;
+    }
+  }
+
+  &__left {
+    text-align: end;
+
+    &__search {
+      @include input;
+      display: none;
+    }
+
+    i:hover::before {
+      display: block;
+    }
+
+    &__notification {
+      display: inline-block;
+      margin: 0rem 1rem;
+
+      i {
+        font-size: 1.5rem;
+        color: $colmain;
+      }
+
+      span {
+        position: relative;
+        top: -.7rem;
+        color: $colmain;
+      }
+    }
+
+    &__image {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &__name {
+      margin: 0rem .5rem;
+      padding: 1.5rem 0rem;
+      i{
+        position: relative;
+        top: .1rem;
+        padding-left: .3rem;
+      }
+    }
+  }
+  .active{
+    color: $colmain;
+    border-bottom: 2px solid $colmain;
+    width: fit-content;
+  }
+}
+
+/* input search */
+input[type=search] {
+  background: url('../../../assets/images/search.png') no-repeat 9px center;
+  border: none;
+  padding: 9px 10px 9px 32px;
+  border-radius: 10rem;
+  transition: all .5s;
+  outline: none;
+  width: 0px;
+  color: transparent;
+  cursor: pointer;
+}
+
+input[type=search]:focus {
+  border: 1px solid $colfontsecondary;
+  width: 130px;
+  color: $colfont;
+  background-color: $colwhite;
+  cursor: auto;
+}
+
+/* media query */
+@media (max-width: 991px) {
+  .navbar-toggle {
+    display: block !important;
+    background-color: transparent;
+    border: none;
+    top: 0rem;
+
+    i {
+      font-size: 1.5rem;
+      color: $colmain;
+      padding: 1rem;
+    }
+  }
+
+  .top-navbar {
+    display: none !important;
+  }
+
+  .navbar-opened:host {
+    .top-navbar {
+      display: block !important;
+      width: 100% !important;
+      height: auto;
+      flex: none !important;
+      text-align: start;
+
+    }
+  }
+
+  .navbar-opened:host .top-navbar a {
+    display: block;
+    width: 100%;
+    line-height: 2rem !important;
+  }
+
+  .navbar__left {
+    margin-right: 2rem;
+  }
+}
