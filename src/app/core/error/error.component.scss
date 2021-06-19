@@ -1,0 +1,10 @@
+.error{
+    text-align: center;
+    &__button{
+        button{
+            padding: .5rem;
+            position: relative;
+            top: -1rem;
+        }
+    }
+}

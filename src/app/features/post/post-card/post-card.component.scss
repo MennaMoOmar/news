@@ -10,11 +10,6 @@
     margin: 2rem 0rem;
     cursor: pointer;
 
-    &:hover {
-      transform: translateY(-.3rem);
-      transition: all .3s;
-    }
-
     &__header {
       .col-10 {
         span {
@@ -85,17 +80,16 @@
     &__image {
       img {
         width: 100%;
-        height: 10rem;
+        height: 15rem;
         margin: 1rem 0rem;
+        border-radius: .5rem;
       }
     }
 
     /* footer part */
     &__footer {
-      border: 1px solid $colbg;
-      border-radius: 2rem;
+      border-top: 1px solid $colbg;
       padding: 1rem;
-
       &__sec1 {
         color: $colfontsecondary;
         padding: .5rem 0rem;
@@ -113,7 +107,6 @@
           text-align: end;
         }
       }
-
 
       .row {
         display: flex;
@@ -136,10 +129,6 @@
             margin-right: .5rem;
             width: 85%;
           }
-
-          i {
-            color: $colmain;
-          }
         }
       }
     }
@@ -156,6 +145,7 @@
         &__sec2 {
           &__likes {
             padding-bottom: 1rem;
+            text-align: center;
           }
         }
       }

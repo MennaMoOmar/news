@@ -14,6 +14,7 @@ import { AddPostComponent } from './features/post/add-post/add-post.component';
 import { PostCardCategoryComponent } from './features/post/post-card-category/post-card-category.component';
 import { AboutComponent } from './shared/about/about.component';
 import { AddPostBtnComponent } from './shared/add-post-btn/add-post-btn.component';
+import { ScrollToTopComponent } from './shared/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddPostBtnComponent } from './shared/add-post-btn/add-post-btn.componen
     AddPostComponent,
     PostCardCategoryComponent,
     AboutComponent,
-    AddPostBtnComponent
+    AddPostBtnComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,

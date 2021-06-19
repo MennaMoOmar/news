@@ -1,8 +1,8 @@
 @import '../../../sass/main.scss';
 
 #footer{
-    background-color: $colsecondary;
-    color: $colfont;
+    background-color: $colfont;
+    color: $colmain;
     padding: 2rem 1rem;
     // padding-left:3rem;
 }
@@ -19,14 +19,14 @@
 
 
 #footer .info h5{
-    color: $colmain;
+    color: $colsecondary;
     margin-bottom: 1rem;
 }
 #footer .info span{
     display: block;
 }
 #footer .info span:hover{
-    color: $colmain;
+    color: $colsecondary;
     cursor:pointer;
     transition: ease-in-out .2s;
 }
